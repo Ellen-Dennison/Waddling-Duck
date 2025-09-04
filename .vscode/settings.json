@@ -4,7 +4,25 @@
         "**/.svn": true,
         "**/.hg": true,
         "**/.DS_Store": true,
-        "**/Thumbs.db": true
+        "**/Thumbs.db": true,
+        ".gitignore": true,
+        "LICENSE": true,
+        "README.md": true,
+        "Template/Template": true,
+        "Template": true,
+        ".vscode": true,
+        ".vscode/settings.json": true,
+        "backend": true,
+        "dist": true
     },
-    "hide-files.files": []
+    "hide-files.files": [
+        "LICENSE",
+        "README.md",
+        "Template/Template",
+        "Template",
+        ".vscode",
+        ".vscode/settings.json",
+        "backend",
+        "dist"
+    ]
 }
