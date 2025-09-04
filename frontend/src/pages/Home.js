@@ -1,11 +1,15 @@
-const React = 'react';
+const React = require('react');
+const { createElement } = require('react');
 
-export default function Home() 
+
+function Home() 
 {
-  return React.createElement(
+  return createElement(
     'div',
     null,
-    React.createElement('h1', null, 'Home Page'),
-    React.createElement('p', null, 'Welcome to the home page!')
+    createElement('h1', null, 'Home Page'),
+    createElement('p', null, 'Welcome to the home page!')
   );
 }
+
+module.exports = Home;

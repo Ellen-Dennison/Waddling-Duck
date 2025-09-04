@@ -1,4 +1,5 @@
 const React = require('react');
+const { createElement } = require('react');
 const ReactDOM = require('react-dom/client');
 const App = require('./App'); // If App exports a component directly
 
@@ -11,5 +12,5 @@ const root = ReactDOM.createRoot(container);
 
 // Render the App component
 root.render(
-  React.createElement(App) // No JSX — using React.createElement
+  createElement(App) // No JSX — using React.createElement
 );

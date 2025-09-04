@@ -1,30 +1,33 @@
-const {React} = 'react';
-const { BrowserRouter, Routes, Route, Link } = 'react-router-dom';
-const Home = './pages/Home';
-const About = './pages/About';
+const React = require('react');
+const { createElement } = require('react');
+const { BrowserRouter, Routes, Route, Link } = require('react-router-dom');
+const Home = require('./pages/Home');
+const About = require('./pages/Profile');
 
-export default function App() {
-  return React.createElement(
+function App() {
+  return createElement(
     BrowserRouter,
     null,
-    React.createElement(
+    createElement(
       'div',
       null,
       // Navigation Links
-      React.createElement(
+      createElement(
         'nav',
         null,
-        React.createElement(Link, { to: '/' }, 'Home'),
+        createElement(Link, { to: '/' }, 'Home'),
         ' | ',
-        React.createElement(Link, { to: '/about' }, 'About')
+        createElement(Link, { to: '/about' }, 'About')
       ),
       // Route Definitions
-      React.createElement(
+      createElement(
         Routes,
         null,
-        React.createElement(Route, { path: '/', element: React.createElement(Home) }),
-        React.createElement(Route, { path: '/about', element: React.createElement(About) })
+        createElement(Route, { path: '/', element: createElement(Home) }),
+        createElement(Route, { path: '/about', element: createElement(About) })
       )
     )
   );
 }
+
+module.exports = App;
