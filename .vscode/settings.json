@@ -6,34 +6,30 @@
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
         "LICENSE": true,
-        "README.md": true,
         "Template/Template": true,
         "Template": true,
         ".vscode": true,
         ".vscode/settings.json": true,
         "dist": true,
-        "backend/src": true,
-        "backend": true,
         "public": true,
         "node_modules": true,
         "Dockerfile": true,
         ".babelrc": true,
-        ".gitignore": true
+        ".gitignore": true,
+        "frontend/src/index.js": true
     },
     "hide-files.files": [
         "LICENSE",
-        "README.md",
         "Template/Template",
         "Template",
         ".vscode",
         ".vscode/settings.json",
         "dist",
-        "backend/src",
-        "backend",
         "public",
         "node_modules",
         "Dockerfile",
         ".babelrc",
-        ".gitignore"
+        ".gitignore",
+        "frontend/src/index.js"
     ]
 }

@@ -15,7 +15,17 @@
   \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("{var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar _require = __webpack_require__(/*! react */ \"./node_modules/react/index.js\"),\n  createElement = _require.createElement;\nvar _require2 = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/dist/index.js\"),\n  BrowserRouter = _require2.BrowserRouter,\n  Routes = _require2.Routes,\n  Route = _require2.Route,\n  Link = _require2.Link;\nvar Home = __webpack_require__(/*! ./pages/Home */ \"./frontend/src/pages/Home.js\");\nvar About = __webpack_require__(/*! ./pages/About */ \"./frontend/src/pages/About.js\");\nfunction App() {\n  return createElement(BrowserRouter, null, createElement('div', null,\n  // Navigation Links\n  createElement('nav', null, createElement(Link, {\n    to: '/'\n  }, 'Home'), ' | ', createElement(Link, {\n    to: '/about'\n  }, 'About')),\n  // Route Definitions\n  createElement(Routes, null, createElement(Route, {\n    path: '/',\n    element: createElement(Home)\n  }), createElement(Route, {\n    path: '/about',\n    element: createElement(About)\n  }))));\n}\nmodule.exports = App;\n\n//# sourceURL=webpack://imy220-2025/./frontend/src/App.js?\n}");
+eval("{var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n//const { createElement } = require('react');\n//const { BrowserRouter, Routes, Route, Link } = require('react-router-dom');\n//const Home = require('./pages/Home');\n//const About = require('./pages/Profile');\nvar Layout = __webpack_require__(/*! ./Layout */ \"./frontend/src/Layout.js\");\nfunction App() {\n  return /*#__PURE__*/React.createElement(Layout, null);\n}\nmodule.exports = App;\n\n//# sourceURL=webpack://imy220-2025/./frontend/src/App.js?\n}");
+
+/***/ }),
+
+/***/ "./frontend/src/Layout.js":
+/*!********************************!*\
+  !*** ./frontend/src/Layout.js ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar _require = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/dist/index.js\"),\n  BrowserRouter = _require.BrowserRouter,\n  Routes = _require.Routes,\n  Route = _require.Route,\n  Link = _require.Link,\n  useParams = _require.useParams;\n//const { createElement } = require('react');\n\nvar Home = __webpack_require__(/*! ./pages/Home */ \"./frontend/src/pages/Home.js\");\nvar Profile = __webpack_require__(/*! ./pages/Profile */ \"./frontend/src/pages/Profile.js\");\nvar Project = __webpack_require__(/*! ./pages/Project */ \"./frontend/src/pages/Project.js\");\nvar Login = __webpack_require__(/*! ./pages/Login */ \"./frontend/src/pages/Login.js\");\nvar Splash = __webpack_require__(/*! ./pages/Splash */ \"./frontend/src/pages/Splash.js\");\nfunction Layout() {\n  return /*#__PURE__*/React.createElement(BrowserRouter, null, /*#__PURE__*/React.createElement(\"nav\", null, /*#__PURE__*/React.createElement(Link, {\n    to: \"/login\"\n  }, \"LOGIN\"), \" |\", \" \", /*#__PURE__*/React.createElement(Link, {\n    to: \"/signup\"\n  }, \"SINGUP\"), \" |\", \" \", /*#__PURE__*/React.createElement(Link, {\n    to: \"/profile/Hope\"\n  }, \"PROFILE\"), \" |\", \" \", /*#__PURE__*/React.createElement(Link, {\n    to: \"/\"\n  }, \"HOME\"), \" |\", \" \", /*#__PURE__*/React.createElement(Link, {\n    to: \"/project/Hope\"\n  }, \"PROJECTS\")), /*#__PURE__*/React.createElement(Routes, null, /*#__PURE__*/React.createElement(Route, {\n    path: \"/login\",\n    element: /*#__PURE__*/React.createElement(Login, null)\n  }), /*#__PURE__*/React.createElement(Route, {\n    path: \"/signup\",\n    element: /*#__PURE__*/React.createElement(Splash, null)\n  }), /*#__PURE__*/React.createElement(Route, {\n    path: \"/\",\n    element: /*#__PURE__*/React.createElement(Home, null)\n  }), /*#__PURE__*/React.createElement(Route, {\n    path: \"/profile/:profileId\",\n    element: /*#__PURE__*/React.createElement(Profile, null)\n  }), /*#__PURE__*/React.createElement(Route, {\n    path: \"/project/:projectId\",\n    element: /*#__PURE__*/React.createElement(Project, null)\n  })));\n}\nmodule.exports = Layout;\n\n//# sourceURL=webpack://imy220-2025/./frontend/src/Layout.js?\n}");
 
 /***/ }),
 
@@ -29,23 +39,53 @@ eval("{var React = __webpack_require__(/*! react */ \"./node_modules/react/index
 
 /***/ }),
 
-/***/ "./frontend/src/pages/About.js":
-/*!*************************************!*\
-  !*** ./frontend/src/pages/About.js ***!
-  \*************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("{var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar _require = __webpack_require__(/*! react */ \"./node_modules/react/index.js\"),\n  createElement = _require.createElement;\nfunction About() {\n  return createElement('div', null, createElement('h1', null, 'About Page'), createElement('p', null, 'This is the about page.'));\n}\nmodule.exports = About;\n\n//# sourceURL=webpack://imy220-2025/./frontend/src/pages/About.js?\n}");
-
-/***/ }),
-
 /***/ "./frontend/src/pages/Home.js":
 /*!************************************!*\
   !*** ./frontend/src/pages/Home.js ***!
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("{var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar _require = __webpack_require__(/*! react */ \"./node_modules/react/index.js\"),\n  createElement = _require.createElement;\nfunction Home() {\n  return createElement('div', null, createElement('h1', null, 'Home Page'), createElement('p', null, 'Welcome to the home page!'));\n}\nmodule.exports = Home;\n\n//# sourceURL=webpack://imy220-2025/./frontend/src/pages/Home.js?\n}");
+eval("{var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar _require = __webpack_require__(/*! react */ \"./node_modules/react/index.js\"),\n  createElement = _require.createElement;\nfunction Home() {\n  return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"THIS IS THE HOME PAGE\"));\n}\nmodule.exports = Home;\n\n//# sourceURL=webpack://imy220-2025/./frontend/src/pages/Home.js?\n}");
+
+/***/ }),
+
+/***/ "./frontend/src/pages/Login.js":
+/*!*************************************!*\
+  !*** ./frontend/src/pages/Login.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(r, a) { if (r) { if (\"string\" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return \"Object\" === t && r.constructor && (t = r.constructor.name), \"Map\" === t || \"Set\" === t ? Array.from(r) : \"Arguments\" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }\nfunction _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }\nfunction _iterableToArrayLimit(r, l) { var t = null == r ? null : \"undefined\" != typeof Symbol && r[Symbol.iterator] || r[\"@@iterator\"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t[\"return\"] && (u = t[\"return\"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }\nfunction _arrayWithHoles(r) { if (Array.isArray(r)) return r; }\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar useState = React.useState;\nfunction Login() {\n  var _useState = useState(''),\n    _useState2 = _slicedToArray(_useState, 2),\n    email = _useState2[0],\n    setEmail = _useState2[1];\n  var _useState3 = useState(''),\n    _useState4 = _slicedToArray(_useState3, 2),\n    password = _useState4[0],\n    setPassword = _useState4[1];\n  var _useState5 = useState(''),\n    _useState6 = _slicedToArray(_useState5, 2),\n    message = _useState6[0],\n    setMessage = _useState6[1];\n  var handleSubmit = function handleSubmit(e) {\n    e.preventDefault();\n    if (!email || !password) {\n      setMessage('Please fill in all fields');\n      return;\n    }\n    fetch('/auth/signin', {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json'\n      },\n      body: JSON.stringify({\n        email: email,\n        password: password\n      })\n    }).then(function (res) {\n      return res.json();\n    }).then(function (data) {\n      return setMessage(\"Server says: \".concat(data.message || JSON.stringify(data)));\n    })[\"catch\"](function (err) {\n      return setMessage(\"Error: \".concat(err.message));\n    });\n  };\n  return React.createElement('div', null, React.createElement('h2', null, 'Login'), React.createElement('form', {\n    onSubmit: handleSubmit\n  }, React.createElement('input', {\n    type: 'email',\n    placeholder: 'Email',\n    value: email,\n    onChange: function onChange(e) {\n      return setEmail(e.target.value);\n    }\n  }), React.createElement('input', {\n    type: 'password',\n    placeholder: 'Password',\n    value: password,\n    onChange: function onChange(e) {\n      return setPassword(e.target.value);\n    }\n  }), React.createElement('button', {\n    type: 'submit'\n  }, 'Sign In')), message && React.createElement('p', null, message));\n}\nmodule.exports = Login;\n\n//# sourceURL=webpack://imy220-2025/./frontend/src/pages/Login.js?\n}");
+
+/***/ }),
+
+/***/ "./frontend/src/pages/Profile.js":
+/*!***************************************!*\
+  !*** ./frontend/src/pages/Profile.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar _require = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/dist/index.js\"),\n  BrowserRouter = _require.BrowserRouter,\n  Routes = _require.Routes,\n  Route = _require.Route,\n  Link = _require.Link,\n  useParams = _require.useParams;\nfunction Profile() {\n  var _useParams = useParams(),\n    profileId = _useParams.profileId;\n  console.log(profileId);\n  return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"THIS IS THE PROFILE PAGE FOR \", profileId, \" \"));\n}\nmodule.exports = Profile;\n\n//# sourceURL=webpack://imy220-2025/./frontend/src/pages/Profile.js?\n}");
+
+/***/ }),
+
+/***/ "./frontend/src/pages/Project.js":
+/*!***************************************!*\
+  !*** ./frontend/src/pages/Project.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar _require = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/dist/index.js\"),\n  BrowserRouter = _require.BrowserRouter,\n  Routes = _require.Routes,\n  Route = _require.Route,\n  Link = _require.Link,\n  useParams = _require.useParams;\nfunction Project() {\n  var _useParams = useParams(),\n    projectId = _useParams.projectId;\n  console.log(projectId);\n  return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"THIS IS THE PROJECT PAGE FOR \", projectId));\n}\nmodule.exports = Project;\n\n//# sourceURL=webpack://imy220-2025/./frontend/src/pages/Project.js?\n}");
+
+/***/ }),
+
+/***/ "./frontend/src/pages/Splash.js":
+/*!**************************************!*\
+  !*** ./frontend/src/pages/Splash.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(r, a) { if (r) { if (\"string\" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return \"Object\" === t && r.constructor && (t = r.constructor.name), \"Map\" === t || \"Set\" === t ? Array.from(r) : \"Arguments\" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }\nfunction _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }\nfunction _iterableToArrayLimit(r, l) { var t = null == r ? null : \"undefined\" != typeof Symbol && r[Symbol.iterator] || r[\"@@iterator\"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t[\"return\"] && (u = t[\"return\"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }\nfunction _arrayWithHoles(r) { if (Array.isArray(r)) return r; }\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n//const { BrowserRouter, Routes, Route, Link, useParams} = require('react-router-dom');\nvar useState = React.useState;\nfunction Splash() {\n  var _useState = useState(''),\n    _useState2 = _slicedToArray(_useState, 2),\n    email = _useState2[0],\n    setEmail = _useState2[1];\n  var _useState3 = useState(''),\n    _useState4 = _slicedToArray(_useState3, 2),\n    password = _useState4[0],\n    setPassword = _useState4[1];\n  var _useState5 = useState(''),\n    _useState6 = _slicedToArray(_useState5, 2),\n    confirm = _useState6[0],\n    setConfirm = _useState6[1];\n  var _useState7 = useState(''),\n    _useState8 = _slicedToArray(_useState7, 2),\n    message = _useState8[0],\n    setMessage = _useState8[1];\n  var handleSubmit = function handleSubmit(e) {\n    e.preventDefault();\n    if (!email || !password || !confirm) {\n      setMessage('Please fill in all fields');\n      return;\n    }\n    if (password !== confirm) {\n      setMessage('Passwords do not match');\n      return;\n    }\n    fetch('/auth/signup', {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json'\n      },\n      body: JSON.stringify({\n        email: email,\n        password: password\n      })\n    }).then(function (res) {\n      return res.json();\n    }).then(function (data) {\n      return setMessage(\"Server says: \".concat(data.message || JSON.stringify(data)));\n    })[\"catch\"](function (err) {\n      return setMessage(\"Error: \".concat(err.message));\n    });\n  };\n  return React.createElement('div', null, React.createElement('h2', null, 'Sign Up'), React.createElement('form', {\n    onSubmit: handleSubmit\n  }, React.createElement('input', {\n    type: 'email',\n    placeholder: 'Email',\n    value: email,\n    onChange: function onChange(e) {\n      return setEmail(e.target.value);\n    }\n  }), React.createElement('input', {\n    type: 'password',\n    placeholder: 'Password',\n    value: password,\n    onChange: function onChange(e) {\n      return setPassword(e.target.value);\n    }\n  }), React.createElement('input', {\n    type: 'password',\n    placeholder: 'Confirm Password',\n    value: confirm,\n    onChange: function onChange(e) {\n      return setConfirm(e.target.value);\n    }\n  }), React.createElement('button', {\n    type: 'submit'\n  }, 'Sign Up')), message && React.createElement('p', null, message));\n}\nmodule.exports = Splash;\n\n//# sourceURL=webpack://imy220-2025/./frontend/src/pages/Splash.js?\n}");
 
 /***/ }),
 
